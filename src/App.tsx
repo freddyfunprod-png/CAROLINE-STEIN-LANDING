@@ -26,51 +26,51 @@ const MAPS_LINK = "https://www.google.com/maps/place/Caroline+Stein+Est%C3%A9tic
 
 const SERVICES = [
   {
-    title: "Preenchimento Labial",
-    description: "Harmonização dos lábios com ácido hialurônico para um resultado natural, volumoso e duradouro.",
-    image: "/input_file_2.png"
+    title: "Lábios",
+    description: "Procedimentos para realçar e harmonizar o contorno e volume labial.",
+    image: "https://i.imgur.com/mZxmZab.png"
   },
   {
-    title: "Jato de Plasma 5D",
-    description: "Tecnologia avançada para tratamento de flacidez palpebral, rugas e rejuvenescimento facial sem cortes.",
-    image: "/input_file_0.png"
+    title: "Pálpebras",
+    description: "Tratamentos avançados para rejuvenescimento e cuidado da área dos olhos.",
+    image: "https://i.imgur.com/8pwbkRo.png"
   },
   {
-    title: "Design de Sobrancelhas",
-    description: "Realce seu olhar com técnicas de design personalizado, lamination e micropigmentação.",
-    image: "/input_file_5.png"
+    title: "Sobrancelhas",
+    description: "Design personalizado para valorizar e harmonizar o seu olhar.",
+    image: "https://i.imgur.com/nAjdYDR.png"
   },
   {
-    title: "Harmonização Facial",
-    description: "Procedimentos minimamente invasivos para equilibrar as proporções do rosto e realçar sua beleza única.",
+    title: "Harmonização",
+    description: "Equilíbrio e simetria facial com resultados naturais.",
     image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800"
   },
   {
     title: "Bioestimuladores",
-    description: "Estímulo natural da produção de colágeno para uma pele mais firme, jovem e radiante ao longo do tempo.",
+    description: "Estímulo natural da produção de colágeno para uma pele mais firme.",
     image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800"
   },
   {
     title: "Saúde & Estética",
-    description: "Abordagem completa unindo saúde e estética para que você se sinta bem de dentro para fora.",
-    image: "/input_file_10.png"
+    description: "Cuidado integral para sua saúde, beleza e bem-estar.",
+    image: "https://i.imgur.com/khHaSBX.png"
   }
 ];
 
 const RESULTS = [
-  { title: "Jato de Plasma - Pálpebras", image: "/input_file_0.png" },
-  { title: "Nutrigloss - Hidratação", image: "/input_file_1.png" },
-  { title: "Preenchimento Labial", image: "/input_file_3.png" },
-  { title: "Tratamento de Rugas 5D", image: "/input_file_11.png" },
-  { title: "Design Masculino", image: "/input_file_6.png" },
-  { title: "Design Feminino", image: "/input_file_7.png" }
+  { title: "Resultado 1", image: "https://i.imgur.com/8pwbkRo.png" },
+  { title: "Resultado 2", image: "https://i.imgur.com/n91aTbV.png" },
+  { title: "Resultado 3", image: "https://i.imgur.com/PsLTJIe.png" },
+  { title: "Resultado 4", image: "https://i.imgur.com/VZBwtl5.png" },
+  { title: "Resultado 5", image: "https://i.imgur.com/K898WsF.png" },
+  { title: "Resultado 6", image: "https://i.imgur.com/nvPCtwc.png" }
 ];
 
 const TIPS = [
-  { title: "TPM e sua Pele", image: "/input_file_14.png", description: "Entenda como os hormônios afetam sua beleza." },
-  { title: "O que acontece na pele?", image: "/input_file_16.png", description: "Sinais comuns durante o período menstrual." },
-  { title: "Dicas de Cuidado", image: "/input_file_13.png", description: "Como manter o brilho mesmo na TPM." },
-  { title: "Cortisol e Estresse", image: "/input_file_17.png", description: "O impacto do estresse na saúde cutânea." }
+  { title: "Cuidados Diários", image: "https://i.imgur.com/LCZAlo9.png", description: "Dicas essenciais para manter sua pele sempre saudável." },
+  { title: "Hidratação", image: "https://i.imgur.com/n91aTbV.png", description: "A importância de nutrir a pele em todas as fases." },
+  { title: "Bem-estar", image: "https://i.imgur.com/khHaSBX.png", description: "Pequenos rituais que transformam sua autoestima." },
+  { title: "Saúde da Pele", image: "https://i.imgur.com/8pwbkRo.png", description: "Como cuidar da saúde reflete na sua beleza." }
 ];
 
 const TESTIMONIALS = [
@@ -202,12 +202,12 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <span className="section-subtitle">Bem-vinda à sua melhor versão</span>
+            <span className="section-subtitle">Caroline Stein Estética</span>
             <h1 className="section-title mb-8">
-              Sua beleza, seu <span className="italic text-[#C4A882]">bem-estar</span>, sua saúde.
+              Estética Avançada e <span className="italic text-[#C4A882]">Bem-estar</span>
             </h1>
             <p className="text-lg text-[#8E8279] mb-12 max-w-md leading-relaxed">
-              Procedimentos estéticos de alta qualidade com cuidado humanizado. Cada tratamento é pensado para realçar sua beleza natural e trazer equilíbrio à sua vida.
+              Procedimentos estéticos personalizados para realçar sua beleza natural com segurança e excelência.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
@@ -273,8 +273,8 @@ export default function App() {
       <section id="servicos" className="py-32 px-8 md:px-12 bg-white">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-24">
-            <span className="section-subtitle">Nossas Especialidades</span>
-            <h2 className="section-title">Procedimentos & Tratamentos</h2>
+            <span className="section-subtitle">Nossos Serviços</span>
+            <h2 className="section-title">Serviços</h2>
             <div className="w-20 h-[1px] bg-[#C4A882] mx-auto mt-8" />
           </div>
 
@@ -319,10 +319,10 @@ export default function App() {
       <section id="resultados" className="py-32 px-8 md:px-12 bg-[#F8F4F0]">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-24">
-            <span className="section-subtitle">Transformações Reais</span>
-            <h2 className="section-title">Nossos Resultados</h2>
+            <span className="section-subtitle">Galeria</span>
+            <h2 className="section-title">Resultados</h2>
             <p className="text-sm text-[#8E8279] mt-4 max-w-xl mx-auto">
-              Confira alguns dos nossos procedimentos de antes e depois, realizados com a técnica exclusiva Caroline Stein.
+              Confira alguns dos nossos resultados realizados com a técnica exclusiva Caroline Stein.
             </p>
           </div>
 
@@ -344,9 +344,6 @@ export default function App() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
-                  <p className="text-white font-serif text-xl text-center">{result.title}</p>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -358,10 +355,10 @@ export default function App() {
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
             <div className="max-w-2xl">
-              <span className="section-subtitle">Educação & Saúde</span>
-              <h2 className="section-title">Dicas e Cuidados</h2>
+              <span className="section-subtitle">Informação</span>
+              <h2 className="section-title">Dicas</h2>
               <p className="text-lg text-[#8E8279] mt-6">
-                Acreditamos que o conhecimento é a base para uma pele saudável. Explore nossas dicas sobre hormônios, rotina e bem-estar.
+                Explore nossas dicas sobre cuidados com a pele, rotina e bem-estar.
               </p>
             </div>
             <a 
