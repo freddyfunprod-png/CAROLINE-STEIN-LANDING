@@ -22,48 +22,31 @@ const BUSINESS_NAME = "Caroline Stein Estética";
 const PHONE_NUMBER = "48984555652";
 const WHATSAPP_LINK = `https://wa.me/55${PHONE_NUMBER}?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20com%20a%20Caroline%20Stein.`;
 const INSTAGRAM_LINK = "https://www.instagram.com/estetica.carolinestein/";
+const LOGO_URL = "https://i.imgur.com/nBPiiy4.png";
 const MAPS_LINK = "https://www.google.com/maps/place/Caroline+Stein+Est%C3%A9tica/data=!4m7!3m6!1s0x95273941fe270197:0x2f4045f5f5380a5f!8m2!3d-27.5968357!4d-48.5202143!16s%2Fg%2F11k9ry6b6r!19sChIJlwEn_kE5J5URXwo49fVFQC8";
 
 const SERVICES = [
   {
     title: "Lábios",
     description: "Procedimentos para realçar e harmonizar o contorno e volume labial.",
-    image: "https://i.imgur.com/mZxmZab.png"
+    image: "https://i.imgur.com/khHaSBX.jpg"
   },
   {
     title: "Pálpebras",
     description: "Tratamentos avançados para rejuvenescimento e cuidado da área dos olhos.",
-    image: "https://i.imgur.com/8pwbkRo.png"
+    image: "https://i.imgur.com/8pwbkRo.jpg"
   },
   {
     title: "Sobrancelhas",
     description: "Design personalizado para valorizar e harmonizar o seu olhar.",
-    image: "https://i.imgur.com/nAjdYDR.png"
-  },
-  {
-    title: "Harmonização",
-    description: "Equilíbrio e simetria facial com resultados naturais.",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    title: "Bioestimuladores",
-    description: "Estímulo natural da produção de colágeno para uma pele mais firme.",
-    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    title: "Saúde & Estética",
-    description: "Cuidado integral para sua saúde, beleza e bem-estar.",
-    image: "https://i.imgur.com/1clftZL.jpg"
+    image: "https://i.imgur.com/osHMDAV.jpg"
   }
 ];
 
 const RESULTS = [
   { title: "Resultado 1", image: "https://i.imgur.com/GESraTm.jpg" },
   { title: "Resultado 2", image: "https://i.imgur.com/KRRS9kg.jpg" },
-  { title: "Resultado 3", image: "https://i.imgur.com/GESraTm.jpg" },
-  { title: "Resultado 4", image: "https://i.imgur.com/KRRS9kg.jpg" },
-  { title: "Resultado 5", image: "https://i.imgur.com/GESraTm.jpg" },
-  { title: "Resultado 6", image: "https://i.imgur.com/KRRS9kg.jpg" }
+  { title: "Resultado 3", image: "https://i.imgur.com/LCZAlo9.jpg" }
 ];
 
 const TIPS = [
@@ -131,10 +114,18 @@ export default function App() {
 
       {/* Navigation */}
       <nav className={`fixed w-full z-[1000] transition-all duration-500 ${scrolled ? "bg-white/80 backdrop-blur-lg py-4 border-b border-black/5" : "bg-transparent py-8"}`}>
-        <div className="max-w-[1800px] mx-auto px-8 md:px-12 flex justify-between items-center gap-12">
-          <a href="#home" className="flex flex-col group flex-shrink-0 mr-8">
-            <span className="font-script text-2xl md:text-3xl text-[#C4A882] leading-none">Caroline Stein</span>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E8279] mt-1 group-hover:text-[#C4A882] transition-colors">Estética Avançada</span>
+        <div className="max-w-[1800px] mx-auto px-8 md:px-12 flex justify-between items-center gap-16">
+          <a href="#home" className="flex items-center gap-4 group flex-shrink-0 mr-12">
+            <img 
+              src={LOGO_URL} 
+              alt={BUSINESS_NAME} 
+              className="h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+              referrerPolicy="no-referrer"
+            />
+            <div className="flex flex-col">
+              <span className="font-script text-xl md:text-2xl text-[#C4A882] leading-none">Caroline Stein</span>
+              <span className="text-[8px] uppercase tracking-[0.3em] text-[#8E8279] mt-1 group-hover:text-[#C4A882] transition-colors">Estética Avançada</span>
+            </div>
           </a>
 
           {/* Desktop Nav */}
@@ -242,20 +233,39 @@ export default function App() {
           </motion.div>
         </div>
 
-        <div className="relative h-[60vh] lg:h-auto overflow-hidden">
+        <div className="relative h-[70vh] lg:h-auto overflow-hidden bg-[#3D2E26]">
           <motion.img 
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5 }}
             src="https://i.imgur.com/GTfwR2w.jpg" 
             alt="Caroline Stein Estética" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[center_15%]"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-black/5" />
+          <div className="absolute inset-0 bg-black/20" />
           
+          {/* Text Overlay on Image (as seen in screenshot) */}
+          <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-24 text-white z-10">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              className="max-w-xl mt-32 md:mt-48"
+            >
+              <a 
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-white text-[#3D2E26] px-8 py-4 text-xs uppercase tracking-widest font-medium hover:bg-[#C4A882] hover:text-white transition-all duration-300 shadow-xl"
+              >
+                Agendar Agora
+              </a>
+            </motion.div>
+          </div>
+
           {/* Floating Badge */}
-          <div className="absolute bottom-12 left-12 glass-card p-6 hidden md:block">
+          <div className="absolute bottom-12 right-12 glass-card p-6 hidden md:block z-20">
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-[#C4A882] flex items-center justify-center text-white">
                 <Star size={20} fill="currentColor" />
@@ -522,9 +532,17 @@ export default function App() {
       <footer id="contato" className="py-32 px-8 md:px-12 bg-[#F8F4F0]">
         <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-20">
           <div className="lg:col-span-2">
-            <a href="#home" className="flex flex-col mb-12">
-              <span className="font-script text-4xl text-[#C4A882] leading-none">Caroline Stein</span>
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E8279] mt-2">Estética Avançada</span>
+            <a href="#home" className="flex items-center gap-6 mb-12 group">
+              <img 
+                src={LOGO_URL} 
+                alt={BUSINESS_NAME} 
+                className="h-20 w-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
+              <div className="flex flex-col">
+                <span className="font-script text-4xl text-[#C4A882] leading-none">Caroline Stein</span>
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E8279] mt-2">Estética Avançada</span>
+              </div>
             </a>
             <p className="text-sm text-[#8E8279] max-w-sm leading-relaxed mb-12">
               Especialista em estética facial e corporal, dedicada a elevar sua autoestima com tratamentos de alta qualidade em Santa Catarina.
