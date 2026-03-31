@@ -53,24 +53,24 @@ const SERVICES = [
   {
     title: "Saúde & Estética",
     description: "Cuidado integral para sua saúde, beleza e bem-estar.",
-    image: "https://i.imgur.com/khHaSBX.png"
+    image: "https://i.imgur.com/1clftZL.jpg"
   }
 ];
 
 const RESULTS = [
-  { title: "Resultado 1", image: "https://i.imgur.com/8pwbkRo.png" },
-  { title: "Resultado 2", image: "https://i.imgur.com/n91aTbV.png" },
-  { title: "Resultado 3", image: "https://i.imgur.com/PsLTJIe.png" },
-  { title: "Resultado 4", image: "https://i.imgur.com/VZBwtl5.png" },
-  { title: "Resultado 5", image: "https://i.imgur.com/K898WsF.png" },
-  { title: "Resultado 6", image: "https://i.imgur.com/nvPCtwc.png" }
+  { title: "Resultado 1", image: "https://i.imgur.com/GESraTm.jpg" },
+  { title: "Resultado 2", image: "https://i.imgur.com/KRRS9kg.jpg" },
+  { title: "Resultado 3", image: "https://i.imgur.com/GESraTm.jpg" },
+  { title: "Resultado 4", image: "https://i.imgur.com/KRRS9kg.jpg" },
+  { title: "Resultado 5", image: "https://i.imgur.com/GESraTm.jpg" },
+  { title: "Resultado 6", image: "https://i.imgur.com/KRRS9kg.jpg" }
 ];
 
 const TIPS = [
-  { title: "Cuidados Diários", image: "https://i.imgur.com/LCZAlo9.png", description: "Dicas essenciais para manter sua pele sempre saudável." },
-  { title: "Hidratação", image: "https://i.imgur.com/n91aTbV.png", description: "A importância de nutrir a pele em todas as fases." },
-  { title: "Bem-estar", image: "https://i.imgur.com/khHaSBX.png", description: "Pequenos rituais que transformam sua autoestima." },
-  { title: "Saúde da Pele", image: "https://i.imgur.com/8pwbkRo.png", description: "Como cuidar da saúde reflete na sua beleza." }
+  { title: "Cuidados Diários", image: "https://i.imgur.com/femYvkA.jpg", description: "Dicas essenciais para manter sua pele sempre saudável." },
+  { title: "Hidratação", image: "https://i.imgur.com/oupjkH7.jpg", description: "A importância de nutrir a pele em todas as fases." },
+  { title: "Bem-estar", image: "https://i.imgur.com/femYvkA.jpg", description: "Pequenos rituais que transformam sua autoestima." },
+  { title: "Saúde da Pele", image: "https://i.imgur.com/oupjkH7.jpg", description: "Como cuidar da saúde reflete na sua beleza." }
 ];
 
 const TESTIMONIALS = [
@@ -131,14 +131,14 @@ export default function App() {
 
       {/* Navigation */}
       <nav className={`fixed w-full z-[1000] transition-all duration-500 ${scrolled ? "bg-white/80 backdrop-blur-lg py-4 border-b border-black/5" : "bg-transparent py-8"}`}>
-        <div className="max-w-[1800px] mx-auto px-8 md:px-12 flex justify-between items-center">
-          <a href="#home" className="flex flex-col group">
-            <span className="font-script text-3xl text-[#C4A882] leading-none">Caroline Stein</span>
+        <div className="max-w-[1800px] mx-auto px-8 md:px-12 flex justify-between items-center gap-12">
+          <a href="#home" className="flex flex-col group flex-shrink-0 mr-8">
+            <span className="font-script text-2xl md:text-3xl text-[#C4A882] leading-none">Caroline Stein</span>
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E8279] mt-1 group-hover:text-[#C4A882] transition-colors">Estética Avançada</span>
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-12">
+          <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
@@ -247,8 +247,8 @@ export default function App() {
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5 }}
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200" 
-            alt="Clinic Interior" 
+            src="https://i.imgur.com/GTfwR2w.jpg" 
+            alt="Caroline Stein Estética" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -403,7 +403,7 @@ export default function App() {
           <div className="relative">
             <div className="aspect-[3/4] overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1628102422617-3c52029172b0?auto=format&fit=crop&q=80&w=1000" 
+                src="https://i.imgur.com/4sdSrqF.jpg" 
                 alt="Caroline Stein" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
