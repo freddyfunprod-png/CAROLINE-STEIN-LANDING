@@ -233,19 +233,19 @@ export default function App() {
           </motion.div>
         </div>
 
-        <div className="relative h-[70vh] lg:h-auto overflow-hidden bg-[#3D2E26]">
+        <div className="relative h-[80vh] lg:h-auto overflow-hidden bg-[#3D2E26]">
           <motion.img 
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5 }}
             src="https://i.imgur.com/GTfwR2w.jpg" 
             alt="Caroline Stein Estética" 
-            className="w-full h-full object-cover object-[center_15%]"
+            className="w-full h-full object-contain object-left"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-0 bg-black/10" />
           
-          {/* Text Overlay on Image (as seen in screenshot) */}
+          {/* Text Overlay on Image */}
           <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-24 text-white z-10">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
