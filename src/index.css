@@ -98,7 +98,7 @@ body:has(button:hover) .cursor-ring {
 /* Layout Patterns */
 .split-layout {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   min-height: 100vh;
 }
 

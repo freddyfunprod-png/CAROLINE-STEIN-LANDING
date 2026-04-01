@@ -238,20 +238,19 @@ export default function App() {
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5 }}
-            src="https://i.imgur.com/GTfwR2w.jpg" 
+            src="https://i.imgur.com/aLXD5Mq.jpg" 
             alt="Caroline Stein Estética" 
-            className="w-full h-full object-contain object-left"
+            className="w-full h-full object-cover object-[center_25%]"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-black/10" />
+          <div className="absolute inset-0 bg-black/10 pointer-events-none" />
           
           {/* Text Overlay on Image */}
-          <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-24 text-white z-10">
+          <div className="absolute bottom-12 right-12 z-10">
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="max-w-xl mt-32 md:mt-48"
             >
               <a 
                 href={WHATSAPP_LINK}
